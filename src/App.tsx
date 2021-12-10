@@ -1,6 +1,8 @@
 import React from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import styled from "styled-components/native";
+import styled from "styled-components";
+
+const Board = styled.div``;
 
 function App() {
   const onDragEnd = () => {};
@@ -19,17 +21,6 @@ function App() {
                     {...provided.draggableProps}
                   >
                     One
-                  </li>
-                )}
-              </Draggable>
-              <Draggable draggableId="second" index={1}>
-                {(provided) => (
-                  <li
-                    ref={provided.innerRef}
-                    {...provided.dragHandleProps}
-                    {...provided.draggableProps}
-                  >
-                    Two
                   </li>
                 )}
               </Draggable>
